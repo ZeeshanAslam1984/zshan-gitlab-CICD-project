@@ -1,0 +1,11 @@
+---
+- name: Installing git on linux
+  hosts: all
+  become: true #sudo user
+  gather_facts: yes
+
+  tasks:
+    - name: Install git
+      yum:
+        name: git
+        state: present
